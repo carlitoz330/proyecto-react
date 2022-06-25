@@ -8,7 +8,9 @@ const App = () => {
     <div className="App">
         <div className='contenedorPrincipal'>
           <Navbar />
-          <ItemListContainer />
+          <ItemListContainer 
+          titulo= "Tienda de Peliculas de Control Solar"/>
+          
         </div> 
               
     </div>

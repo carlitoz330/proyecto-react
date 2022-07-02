@@ -1,23 +1,50 @@
-import React  from "react";
+import React, { useState, useEffect }  from "react";
 import '../stylesheets/ItemListContainer.css';
-import ItemCount from './ItemCount';
+import ItemList from "./ItemList";
 
 
 
-function ItemListContainer ({titulo}) {
+function ItemListContainer () {
     
     const onAdd = () => {
         alert('Añadiste elementos seleccionados')
     }
+
+    const [products, setProducts] = useState([]);
+    const [error, setError] = useState(false);
+    const [loading, setLoading] = useState(true);
+
+    useEffect (() => {
+
+        setTimeout(() => {
+            
+          
+            const getProducts = async () => {
+                try {
+                    const res = await fetch("https://fakestoreapi.com/products");
+                    const data = await res.json();
+                    setProducts(data); 
+                }
+                catch (err) {
+                    setError(true);
+                    console.log(err);
+                }
+                finally {
+                    setLoading(false);
+                }
+            } 
+
+            getProducts()
+        }, 2000);     
+
+    }, [])
+
+
     
     return (
         <>
 
-        <h2 className="titulo2"> {titulo} </h2>
-
-        <ItemCount 
-            initial={0}  stock={6} onAdd={onAdd}
-        />
+        <ItemList products = {products} />
 
         </>
     )

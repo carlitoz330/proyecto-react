@@ -9,7 +9,7 @@ function NavBar () {
       <img className="logo" 
       src={logo}/>
       <h1 className="titulo">Window films</h1>
-      <nav class="navegacion">
+      <nav className="navegacion">
           <a href="">Inicio</a>
           <a href="">Control Solar</a>
           <a href="">Seguridad</a>

@@ -1,0 +1,22 @@
+.contenedorItem {
+    border: 1px solid rgb(168, 155, 155);
+    margin: 5px;
+    padding: 3px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.tituloProducto {
+    font-size: 15px;
+    color: rgb(94, 83, 83);
+    text-align: center;
+}
+
+.precioProducto {
+    font-size: 20px;
+    color: rgb(168, 37, 37);
+    font-weight: bold;
+}

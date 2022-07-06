@@ -2,12 +2,12 @@ import React from "react";
 import '../stylesheets/Navbar.css';
 import logo from '../imagenes/logo.JPG';
 import CartWidget from './CartWidget';
+import { Link } from "react-router-dom";
 
 function NavBar () {
   return (
     <div className="contenedorNav">
-      <img className="logo" 
-      src={logo}/>
+      <Link to="/"><img className="logo" src={logo}/></Link>
       <h1 className="titulo">Window films</h1>
       <nav className="navegacion">
           <a href="">Inicio</a>

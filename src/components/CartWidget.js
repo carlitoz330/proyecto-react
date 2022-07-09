@@ -2,11 +2,12 @@ import React from "react";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
+
 function CartWidget () {
 
     return (
         <div>
-            <ShoppingCartIcon color="primary" sx={{ fontSize: 32 }} />
+            <ShoppingCartIcon color="action" sx={{ fontSize: 32 }} />
         </div>
     )
 }

@@ -15,6 +15,9 @@ export const ItemDetailContainer = () => {
 
     useEffect (() => {
 
+
+            
+
             const getItem = async () => {                
 
                 try {
@@ -32,6 +35,7 @@ export const ItemDetailContainer = () => {
             } 
 
             getItem()
+            console.log(getItem)
             
 
     }, [id])

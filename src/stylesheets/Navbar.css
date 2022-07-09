@@ -1,7 +1,7 @@
 .contenedorNav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     
     
 }
@@ -20,3 +20,26 @@ nav a {
     font-size: 13px;
 }
 
+.titulo {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    font-style: oblique;
+    text-decoration: none;
+    color: rgb(90, 87, 87);
+    font-weight: bold;
+
+}
+
+.navegacion {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(90, 87, 87);
+    
+}
+
+.link {
+    margin: 0 7px;
+    padding: 5px;
+    font-size: 15px;
+    color: white;
+}

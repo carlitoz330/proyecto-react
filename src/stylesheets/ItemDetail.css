@@ -16,13 +16,13 @@
 }
 
 .imagenDetail {
-    width: 90%;
-    height: 90%;
+    width: 85%;
+    height: 85%;
 } 
 
 
 .contenedorInfo {
-    background-color: rgb(139, 219, 219);
+    background-color: rgb(202, 214, 214);
     width: 500px;
     padding: 10px;
 }

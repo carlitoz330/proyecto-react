@@ -7,9 +7,7 @@ import {useParams} from 'react-router-dom';
 
 function ItemListContainer () {
     
-    const onAdd = () => {
-        alert('Añadiste elementos seleccionados')
-    }
+    
 
     const {categoryName} = useParams();
 

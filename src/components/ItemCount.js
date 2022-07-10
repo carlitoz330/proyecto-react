@@ -4,6 +4,8 @@ import '../stylesheets/ItemCount.css';
 
 const ItemCount = ({stock, initial, onAdd}) => {
 
+    
+
     const [contador, setContador] = useState(initial)
 
         const suma = () => {
@@ -27,7 +29,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 <p className="resultadoCuenta">{contador}</p>
                 <button className="botonCuenta" onClick={stock > 0 ? suma : ""}> + </button>
             </div>
-            <button className="agregarItem" onClick={stock > 0 ? onAdd : ""}> añadir producto</button>
+            <button className="agregarItem" onClick={stock > 0 ? onAdd : ""}> añadir al Carrito</button>
         </div>
         </>
     )

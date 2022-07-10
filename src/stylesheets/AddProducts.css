@@ -1,0 +1,11 @@
+.botonCompra {
+    background-color:rgb(83, 77, 77);
+    color: white;
+    width: 200px;
+    padding: 8px 0;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}

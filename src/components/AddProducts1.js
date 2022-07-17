@@ -2,7 +2,7 @@ import React from "react";
 import '../stylesheets/AddProducts.css';
 import { Link } from "react-router-dom";
 
-const AddProducts = () => {
+const AddProducts1 = () => {
 
 return (
     <Link to="/cart">
@@ -13,4 +13,4 @@ return (
 }
 
 
-export default AddProducts;
+export default AddProducts1;

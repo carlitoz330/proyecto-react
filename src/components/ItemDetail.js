@@ -14,8 +14,11 @@ const  ItemDetail = ({product}) => {
      
 
     const onAdd  = (contador) => {
+        if(contador > 0) {
         setFinalized(true)
         addProduct({...product, qty: contador});
+    }
+    
     }
 
 

@@ -1,11 +1,13 @@
 import React, { useContext, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { contexto } from '../Context/CartContext';
 import ProductoSel from "./ProductSel";
+import '../stylesheets/Cart.css';
 
 
 const Cart = () => {
 
-   const { products, resetList  } = useContext(contexto);
+   const { products, resetList } = useContext(contexto);
     
    
     const [price, setPrice] = useState(0);
@@ -13,30 +15,44 @@ const Cart = () => {
     const totalPrice = () => {
      let price = 0;
      products.forEach(product => {
-        price += product.price;
+      let total =  product.qty * product.price
+        price += total;
      }
      )
-     setPrice(price);  
-     console.log(price)  
+     setPrice(price.toFixed(2));  
+     
     }
 
     useEffect(() => {
         totalPrice();    
     }, [products])
 
+
+    
+
    
 return (
 
-    <div className="contenedorCart">
-        {products.map(product  => (
-            <ProductoSel  key= {product.id} product={product}/>
-        ))}  
+    <>
+        { products.length === 0
+        ? <h1 className="avisoCompra"> No hay Productos, busca <Link to="/"> aqui </Link></h1>
+        :
+        <>          
+           
+            <div className="contenedorCart"> 
 
-        <div>Precio total = {price}</div>      
-       <button onClick={resetList}>Vaciar Carrito</button>
-       
+                {products.map(product  => (
+                    <ProductoSel  key= {product.id} product={product} />
+                    ))}  
 
-    </div>
+                <div className="infoPrecioVenta"> Precio total = <span className="precioVenta"> $ {price} </span> </div>      
+            <button onClick={resetList} className="vaciarCarro" >Vaciar Carrito</button>
+            
+
+            </div>
+        </>    
+        }
+    </>
 
     
 )

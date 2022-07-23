@@ -1,0 +1,30 @@
+.infoPrecioVenta {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(90, 87, 87);
+    padding: 5px 10PX;
+    color: white;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+.precioVenta {
+    color: rgb(219, 255, 13);
+}
+
+.vaciarCarro {
+    font-size: 15px;
+    margin-top: 5px;
+    padding: 8px 10PX;
+    background-color: rgb(9, 27, 110);
+    color: white;
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.avisoCompra {
+    text-transform: uppercase;
+    color:rgb(128, 128, 128);
+    margin-top: 70px;
+}

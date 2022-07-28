@@ -35,7 +35,7 @@ const  ItemDetail = ({product}) => {
                 <p className="categoriaDetalle">{product.category}</p>
                 <div> 
                 {!finalized 
-                ? <ItemCount stock={5} initial={0} onAdd={onAdd}/>
+                ? <ItemCount stock={product.stock} initial={0} onAdd={onAdd}/>
                 : <AddProducts1/>}
                 </div>
                 

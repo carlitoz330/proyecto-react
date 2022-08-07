@@ -33,7 +33,6 @@ function ItemListContainer () {
                             ...doc.data(),
                         }
                     })
-                    console.log(lista)
                     setProducts(lista);
                 })
 
@@ -44,47 +43,13 @@ function ItemListContainer () {
 
     }, [categoryName])
 
-
-
-    /* useEffect (() => {
-        
-
-        setTimeout(() => {
-            const url = categoryName
-                ? `https://fakestoreapi.com/products/category/${categoryName}`
-                : `https://fakestoreapi.com/products`
-            
-          
-            const getProducts = async () => {
-                try {
-                    const res = await fetch(url);
-                    const data = await res.json();
-                    setProducts(data); 
-                }
-                catch (err) {
-                    setError(true);
-                    console.log(err);
-                }
-                finally {
-                    setLoading(false);
-                }
-            } 
-
-            getProducts()
-        }, 3000);     
-
-    }, [categoryName])
- */
-
-
-
     
     return (
         <>
 
         {loading ? <>
         
-        <p className="cargaProductos"> <CircularProgress color="success" /> Cargando productos, espere unos segundos... </p>  </>
+        <p className="cargaProductos"> <CircularProgress color="success" title="ico de carga" /> Cargando productos, espere unos segundos... </p>  </>
         : <ItemList products = {products} />}
 
         </>

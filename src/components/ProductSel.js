@@ -17,7 +17,7 @@ const ProductoSel = ({ product }) => {
     
         <div className="contenedorSelPrin">
             <div className="">
-                <img  className="imagenSel" src={product.image} />
+                <img  className="imagenSel" alt="" src={product.image} />
             </div>
             <div className="contenedorSel">
                 <h2 className="tituloSel">{product.title}</h2>

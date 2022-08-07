@@ -2,10 +2,11 @@ import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { contexto } from '../Context/CartContext';
 import ProductoSel from "./ProductSel";
-import Form from "./Form"
 import '../stylesheets/Cart.css';
 import { db } from "../firebase/firebase";
 import { doc, addDoc, collection, serverTimestamp, updateDoc } from "firebase/firestore"
+import swal from 'sweetalert';
+import Form from "./Form" 
 
 
 const Cart = () => {
@@ -42,16 +43,33 @@ const Cart = () => {
         
         .then((resul) => {
             setIdVenta(resul.id)
+
+            swal({
+                title: "Transaccion exitosa!",
+                text: `El id de su compra es: ${resul.id}`,
+                icon: "success",
+              });    
+
+              
+
         }) 
 
-        console.log(products)
+        resetList()
 
-        const updateCollection = doc(db, "productos", "id" );
-        updateDoc(updateCollection, {stock: products.stock - products.qty})
+        
+
+        console.log((products[0].id))
+        
+        products.forEach(product => {
+            const updateCollection = doc(db, "productos", product.id  );
+            updateDoc(updateCollection, {stock: product.stock - product.qty})
+           }
+        )
+
+        
+
+        
     }
-
-
-
 
    
 return (
@@ -70,12 +88,12 @@ return (
 
                 <button onClick={resetList} className="vaciarCarro" >Vaciar Carrito</button>      
                 <div className="infoPrecioVenta"> Precio total = <span className="precioVenta"> $ {price} </span> </div>      
-                              
-                <Form />
             
             </div>
 
-            <button onClick={finalizarCompra}>Finalizar Compra</button>
+            <Form />
+
+            <button className="botonFinalizar" onClick={finalizarCompra}>Finalizar Compra</button>
                   
 
         </>    

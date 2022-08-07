@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
 import '../stylesheets/ItemDetail.css';
 import ItemCount from './ItemCount'
 import AddProducts1 from "./AddProducts1";
@@ -26,7 +25,7 @@ const  ItemDetail = ({product}) => {
     return (
         <div className="contenedorItemDetail">
             <div className="contenedorImagen">
-                <img className="imagenDetail" src={product.image} />
+                <img className="imagenDetail" alt="" src={product.image} />
             </div>
             <div className="contenedorInfo">
                 <h1 className="tituloDetalle">{product.title}</h1>

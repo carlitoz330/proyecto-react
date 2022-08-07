@@ -23,7 +23,7 @@ export const ItemDetailContainer = () => {
                 ...result.data(),
             })
         })
-        .catch(err => console.log(err))
+        .catch(err => console.log(error))
         .finally(() => setLoaded(false))
     }, [id]);
 

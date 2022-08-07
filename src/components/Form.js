@@ -1,46 +1,47 @@
 
 import React from "react";
+import '../stylesheets/Formulario.css';
 
 
-function Form (finalizarCompra) {
+function Form () {
 
  
 
 
     
     return (
-    <div>
-        <form >
+    <div className="contenedorForm">
+
+        <form className="formulario">
            
-
-                <div>
+            <fieldset >
+                <legend className="tituloForm">Completa los datos para la compra</legend>
+                <div className="campo">
                     <label>Nombre Completo</label>
-                    <input type="text" placeholder="Tu Nombre"/>
+                    <input className="imput-text" type="text" placeholder="Tu Nombre"/>
                 </div>
 
-                <div>
+                <div className="campo">
                     <label>Cedula</label>
-                    <input  type="number" placeholder="Tu Cedula"/>
+                    <input className="imput-text" type="number" placeholder="Tu Cedula"/>
                 </div>
 
-                <div>
-                <label>Direccion</label>
-                <input type="text" placeholder="Tu Dirección"/>
+                <div className="campo">
+                    <label>Direccion</label>
+                    <input className="imput-text" type="text" placeholder="Tu Dirección"/>
                 </div>
 
-                <div>
+                <div className="campo">
                     <label>telefono</label>
-                    <input id="telefono" type="tel" placeholder="Tu Telefono"/>
+                    <input className="imput-text" id="telefono" type="tel" placeholder="Tu Telefono"/>
                 </div>
 
-                <div>
-                <label>Email</label>
-                <input id="correo" type="email" placeholder="Tu Email"/>
+                <div className="campo">
+                    <label>Email</label>
+                    <input className="imput-text" id="correo" type="email" placeholder="Tu Email"/>
                 </div>
-
-                {/* <div>
-                    <input type="submit" value=" Finalizar compra"  />
-                </div> */}
+            </fieldset>
+                
 
         </form>
     </div>
